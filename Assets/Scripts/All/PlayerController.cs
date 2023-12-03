@@ -11,6 +11,7 @@ public class PlayerController : MonoSingleton<PlayerController>
     [Range(0, 1f)][SerializeField] float _malusAirMovementSpeed = .36f;
     [SerializeField] float _movementSpeed = 1;
     [SerializeField] float _jumpForce = 1;
+    [SerializeField] int _gravityScale = 3;
 
     [SerializeField] LayerMask _groundLayer;
 
