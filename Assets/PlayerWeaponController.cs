@@ -1,0 +1,16 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerWeaponController : MonoBehaviour
+{
+    public void Init()
+    {
+
+    }
+
+    public void Attack()
+    {
+
+    }
+}

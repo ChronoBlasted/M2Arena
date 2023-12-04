@@ -18,6 +18,8 @@ public class GameManager : MonoSingleton<GameManager>
         UIManager.Instance.Init();
 
         PlayerController.Instance.Init();
+
+        NakamaManager.Instance.Init();
     }
 
     void Update()
