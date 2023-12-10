@@ -11,6 +11,7 @@ public class NakamaManager : MonoSingleton<NakamaManager>
 
     [SerializeField] NakamaAuthentication _nakamaAuthentication;
     [SerializeField] NakamaUserAccount _nakamaUserAccount;
+    [SerializeField] NakamaMatchManager _nakamaMatchManager;
 
     public IClient Client { get => _client; }
     public ISession Session { get => _session; }
@@ -30,6 +31,8 @@ public class NakamaManager : MonoSingleton<NakamaManager>
         _socket = socket;
 
         await _nakamaUserAccount.Init(_client, _session);
+
+        await _nakamaMatchManager.Init();
 
         GameManager.Instance.UpdateStateToMenu();
     }
